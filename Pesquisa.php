@@ -6,7 +6,6 @@ class Pesquisa
 	public function __construct(PDO $db)
 	{
 		$this->db = $db;
-
 	}
 
 	public function listar()
@@ -40,7 +39,6 @@ class Pesquisa
 		$stmt->bindParam(":requisicao_temperatura",$data['requisicao_temperatura']);
 		$stmt->bindParam(":requisicao_tipo",$data['requisicao_tipo'],PDO::PARAM_STR);
 		$stmt->bindParam(":resposta_temperatura",$data['resposta_temperatura']);
-		//$stmt->bindParam(":datahora_consulta","NOW()");
 		$stmt->bindParam(":ip_requisitante",$data['ip_requisitante'],PDO::PARAM_STR);
 		$stmt->bindParam(":xml_gerado",$data['xml_gerado']);
 

@@ -9,8 +9,7 @@ class Conexao
 			return $connection;
 		}
 		catch(PDOException $e){
-			print_r($e->getMessage());
-			//echo "Erro ao conectar" . $e->getMessange();
+			echo "Erro ao conectar: " . $e->getMessange();
 
 		}
 	}
